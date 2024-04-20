@@ -1,0 +1,514 @@
+\documentclass{article}
+\usepackage{geometry}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage{parskip}
+\newgeometry{vmargin={15mm}, hmargin={24mm,34mm}}
+\theoremstyle{definition} 
+\newtheorem{definition}{Definition}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}{Corollary}[theorem]
+
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\fdiff}{f^{\prime}}
+
+\title{AAP PLF Analysis Problem Set}
+\date{March 2024}
+
+\begin{document}
+
+\maketitle
+
+\section{Warmup}
+
+\begin{enumerate}
+    \item Write down the formal definition of the supremum.
+    \item Write down the definition of Cauchy convergence and convergence.
+    \item Write down the definition of limsup and liminf.
+\end{enumerate}
+
+\section{Problems with Fields}
+
+\begin{enumerate}
+
+    \item Let $(F, +, 0, \cdot, 1, \leq) $ be an ordered field. Prove that 
+
+    \item
+    \begin{enumerate}
+        \item Write down the definition of the triangle inequality and prove it.
+        \item Prove the following inequality:
+
+        \[ \lvert \lvert a \rvert - \lvert b \rvert \rvert \leq \lvert a - b \rvert\]
+        
+        This is also called \textbf{the reverse triangle inequality.}
+    \end{enumerate}
+
+
+    \item Prove the following:
+
+    \[ \forall a,b \in F: \lvert a \cdot b \rvert = \lvert a \rvert \cdot \lvert b \rvert\]
+
+    \begin{proof}
+        
+    \end{proof}
+
+\end{enumerate}
+
+\section{Supremum and Completeness Problems}
+
+\subsection{Definitions and Important Proofs}
+
+\begin{enumerate}
+
+    \item Write down the Archimedean Property of the reals.
+
+    \item 
+    
+        \begin{enumerate}
+        \item State the Completeness Axiom for Real Numbers.
+        \item Assuming the completeness axiom, prove the analogous statement for the infimum.
+        \end{enumerate}
+
+
+    \item Let \( S = [a, b) \), where \( a < b \). Find \( \inf(S) \) and \( \sup(S) \).
+
+    \item 
+    Let \( S = \left\{ \frac{n}{2^{n}} : n \in \mathbb{N}, n \neq 0 \right\} \). Find \( \inf(S) \) and \( \sup(S) \).
+
+    \item
+    Let \( A \subseteq \mathbb{R} \) such that \( A \neq \emptyset \) and bounded above. Let \( b > 0 \). Define 
+    \[ 
+    bA = \{ba : a \in A\}.
+    \]
+    Show that \( \sup(bA) = b\sup(A) \). What is \( \sup(bA) \) if \( b < 0 \) and \( A \) is bounded below?
+
+    \item Prove that for any non-empty $A,B \subseteq \mathbb{Q}$ admitting suprema, we have 
+
+    \[ A \subseteq B \implies \sup(A) \leq \sup(B)\]
+
+    Then, show that under these conditions $A \cup B$ admits a supremum and show
+
+    \[ \sup(A \cup B) = \max(\sup(A), \sup(B))\]
+    \item 
+
+    Given two sets $A,B \subseteq \mathbb{Q}$, denote 
+
+    \[ A + B := \{a + b : a \in A \land b \in B \}\]
+
+    Assuming that both $A,B$ are non-empty and admit suprema, prove that 
+
+    \[ \sup(A + B) = \sup(A) + \sup(B)\]
+\end{enumerate}
+
+\newpage
+
+\section{Sequences}
+
+\subsection{Give an example of each of the following or prove that it is impossible.}
+
+
+
+
+
+\subsection{Important Proofs}
+
+\begin{enumerate}
+    \item Prove the multiplication law for limits.
+    
+    \item Prove that every convergent sequence is bounded. Then, prove that every Cauchy sequence is bounded. Give an example of a bounded sequence that is not convergent (with a proof).
+   
+    \item Prove that every monotone bounded sequence converges.
+    
+\end{enumerate}
+
+\subsection{Textbook Problems}
+
+Ross, Section 10: 6, 8, 9, 10
+
+\subsection{Problems}
+
+\begin{enumerate}
+    \item Prove that for every real number $x$, there exists a sequence of \textbf{rationals} $q_{n}$ such that $q_{n}$ converges to $x$.
+    \item Let \( \{a_n\}_{n \in \mathbb{N}} \) be a sequence that diverges to $- \infty$. Prove that \( \{a_n^{2}\}_{n \in \mathbb{N}} \) diverges to $+ \infty$.
+
+    \item Let \( \{a_n\}_{n \in \mathbb{N}} \) be a sequence of real numbers. If $L \in $ is not a subsequential limit of \( \{a_n\}_{n \in \mathbb{N}} \), there exists some $\epsilon > 0$ such that only finitely many terms of the sequence \( \{a_n\}_{n \in \mathbb{N}} \) lie in the interval $(L - \epsilon, L + \epsilon)$.
+
+    \item 
+\end{enumerate}
+
+\newpage
+
+\section{Subsequences}
+
+\subsection{Give an example of each of the following or prove that it is impossible.}
+
+\begin{enumerate}
+    \item A monotonic sequence with no convergent subsequences.
+    \item A sequence with 3 subsequential limits.
+    \item A sequence that has every integer as a subsequential limit.
+    \item A sequence that has every rational as a subsequential limit.
+    \item A sequence that has every real number as a subsequential limit.
+    \item An unbounded sequence with a convergent subsequence.
+\end{enumerate}
+
+
+
+\newpage
+
+\section{Liminf and Limsup}
+
+\subsection{Give an example of each of the following or prove that it is impossible.}
+
+\subsection{Problems}
+
+\begin{enumerate}
+    \item If $\limsup_{n \to \infty} a_{n} = + \infty$, $\limsup_{n \to \infty} k \cdot a_{n} = + \infty$ for any $k > 0$.
+    \item Prove that there's a subsequence that converges to the limsup.
+    \item Let \( \{a_n\}_{n \in \mathbb{N}} \) be a sequence of real numbers and let $a$ be a subsequential limit of $a_{n}$. Prove that 
+    
+    \[ \liminf_{n \to \infty} a_{n} \leq a \leq  \limsup_{n \to \infty} a_{n}\].
+    \item Given bounded sequences of real numbers \( \{a_n\}_{n \in \mathbb{N}} \) and \( \{b_n\}_{n \in \mathbb{N}} \), prove that
+    \[
+    \limsup_{n \to \infty} (a_n + b_n) \leq \limsup_{n \to \infty} a_n + \limsup_{n \to \infty} b_n
+    \]
+
+    Give an example where the inequality is strict.
+    \item Given bounded non-negative sequences of real numbers \( \{a_n\}_{n \in \mathbb{N}} \) and \( \{b_n\}_{n \in \mathbb{N}} \), prove that
+    \[
+    \limsup_{n \to \infty} (a_n + b_n) \leq (\limsup_{n \to \infty} a_n)(\limsup_{n \to \infty} b_n)
+    \]
+
+    Give an example where the inequality is strict.
+
+\end{enumerate}
+
+\newpage
+
+\section{Infinite Series}
+
+\subsection{Give an example of each of the following or prove that it is impossible.}
+
+\begin{enumerate}
+    \item A convergent infinite series where the root test applies but the ratio test doesn't apply.
+    \item A convergent infinite series where neither the root or the ratio test apply.
+    \item A divergent infinite series where neither the root or the ratio test apply.
+    \item An alternating series whose terms go to $0$ but doesn't converge.
+    
+\end{enumerate}
+
+\subsection{Problems}
+
+\begin{enumerate}
+    \item Suppose that $\{a_{n}\}_{n \in \mathbb{N}}$ is a sequence taking on finitely many values in the open interval $(-1,1)$. Show that $ \sum\limits_{n = 0}^\infty (a_{n})^{n}$ converges. Hint: It's crucial that it's the open interval.
+    \item Let $\{a_{n}\}_{n \in \mathbb{N}}$ be a sequence of real numbers such that $\liminf_{n \to \infty} a_{n} > 0$. Prove that there's no subsequence $\{ a_{n_{k}}\}$ such that $ \sum\limits_{n = 0}^\infty a_{n_{k}}$ converges.
+    \item Let $\{a_{n}\}_{n \in \mathbb{N}}$ and $\{b_{n}\}_{n \in \mathbb{N}}$ be sequences of real numbers such that $a_{n} \geq 0$ and $\sum\limits_{n = 0}^\infty a_{n}$ and $\sum\limits_{n = 0}^\infty b_{n}$ converge. Prove that $\sum\limits_{n = 0}^\infty a_{n}b_{n}^{2}$ also converges.
+
+    \item Given sequences of real numbers $\{a_{n}\}_{n \in \mathbb{N}}$ and $\{b_{n}\}_{n \in \mathbb{N}}$ such that $\sum\limits_{n = 0}^\infty \lvert a_{n} \rvert $ converges and $\{ b_{n} \}$ is bounded, prove that $\sum\limits_{n = 0}^\infty a_{n} b_{n}$ converges. 
+    \item[Challenge Problem] Given sequences of real numbers $\{a_{n}\}_{n \in \mathbb{N}}$ and $\{b_{n}\}_{n \in \mathbb{N}}$ such that 
+
+    \[ \sum\limits_{n = 0}^\infty a_{n} \text{ convergent } \land b_{n} \text{ monotone bounded }\], prove that \[\sum\limits_{n = 0}^\infty a_{n}b_{n} \text{ convergent }\]
+
+\end{enumerate}
+
+\newpage
+
+\section{Continuity}
+
+\subsection{Give an example of each of the following or prove that it is impossible.}
+
+\begin{enumerate}
+    \item A function that satisfies IVP but is not continuous.
+    \item 
+\end{enumerate}
+
+\subsection{Definitions and Important Proofs}
+
+\begin{enumerate}
+    \item Show the equivalence of the $\epsilon$-$\delta$ definition of continuity and the sequential definition of continuity.
+    \item Prove EVT and IVT.
+\end{enumerate}
+
+\subsection{Textbook Problems}
+
+Ross, Section 17: 7,8,9,12,13
+
+Ross, Section 18: 5,6,7,8,10
+
+\subsection{Problems}
+
+\begin{enumerate}
+    \item Let $f: \R \xrightarrow{} \R$ be the function defined by $f(x) = x(1-x)$. Prove that $f$ is continuous using the $\epsilon$-$\delta$ definition.
+
+    \item Let $f: \R \xrightarrow{} \R$ be a continuous function and assume $C$ is a closed subset of $Im(f)$. Prove that $f^{-1}(C)$ is also closed. Repeat this with open sets.
+    
+    \item Let $f: \R \xrightarrow{} \R$ be the floor function. Prove that $f$ is continuous at $x$ if and only if $x \notin \Z$.
+
+\end{enumerate}
+
+\newpage
+
+\section{Uniform Continuity}
+
+\subsection{Give an example of each of the following or prove that it is impossible.}
+
+\subsection{Problems}
+
+\begin{enumerate}
+    \item Prove that $f: \R \xrightarrow{} \R$ defined by $f(x) = x^{2}$ is not uniformly continuous.
+
+    \item A function is said to be \textbf{Lipschitz continuous} if $\exists M > 0: \forall x,y \in Dom(f):$
+
+    \[ \lvert f(x) - f(y) \rvert \leq \lvert x - y \rvert\]
+
+    Prove that Lipschitz continuity implies uniform continuity.
+    \item 
+    
+    \begin{enumerate}
+        \item Prove that $\lvert \sin x - \sin y \rvert \leq \lvert x - y \rvert $ for all $x,y \in \R$.
+        \item Show that $\sin x$ is uniformly continuous on $\R$.
+    \end{enumerate}
+
+    \item Prove that $f(x) = \sqrt{x}$ is uniformly continuous on $(0,1]$ and $[1,\infty)$. Conclude that $f(x)$ is uniformly continuous on $(0,\infty)$.
+    
+\end{enumerate}
+
+\newpage
+
+\section{Differentiation}
+
+\subsection{Definition and Basic Properties}
+
+\begin{definition}
+    A function $f: I \xrightarrow{} \R$ is \textbf{differentiable} at $c \in I$
+    if the following limit exists.
+
+    \[ \lim_{z \to x} \frac{f(z) - f(x)}{z-x} \]
+
+    If the limit it exists, it's denoted by $f^{\prime}$. We can treat $f^{\prime}$
+    as a function defined when this limit exists.
+\end{definition}
+
+An equivalent way to express this limit is the following
+
+\[ \lim_{h \to 0} \frac{f(x+h) - f(x)}{h} \]
+
+Notice that in both cases, the function isn't even defined at the limit point.
+This is no loss as the value at $x$ is irrelevant for the limit at $x$.
+
+\begin{lemma}
+    Let $f: \R \xrightarrow{} \R$ be differentiable at $x \in \text{int(Dom($f$))}$.
+    Then, $f$ is continuous at $x$.
+\end{lemma}
+
+\begin{lemma}[Differentiation Laws]
+    Let $f,g: \R \xrightarrow{} \R$ with $x \in \text{int(Dom($f$))}$. If $f$ and $g$ are
+    both differentiable at $x$, then so are $(f + g)(x)$ and $(f \cdot g)(x)$ and
+
+    \textbf{Finish writing this out.}
+\end{lemma}
+
+
+\begin{lemma}
+    Let $f: \R \xrightarrow{} \R$ be differentiable at $x \in \text{int(Dom($f$))}$.
+    If $f$ has a local extremum at $x$, then $f^{\prime}(x) = 0$. 
+\end{lemma}
+\begin{proof}
+    We'll consider the left and right limit of the derivative.
+    \textbf{Finish this proof.}
+\end{proof}
+
+A function might have a local extremum at a point where the derivative doesn't exist.
+One such example is $f(x) = \lvert x \rvert$, which has a minimum at $x=0$ but isn't differentiable
+at $0$. However, the one-sided derivatives exist and obey the corresponding inequalities.
+
+\subsection{The Mean Value Theorem}
+
+\begin{theorem}[Rolle's MVT]\label{rolle_mvt}
+    Let $a < b$ reals and $f: [a,b] \xrightarrow{} \R$ a function (with Dom($f$) = $[a,b]$)
+    that is continous on $[a,b]$ and differentiable on $(a,b)$. Then,
+
+    \[ f(a) = f(b) \implies \exists x \in (a,b): f^{\prime}(x) = 0\]
+\end{theorem}
+\begin{proof}
+    
+\end{proof}
+
+\begin{theorem}[Lagrange's MVT]\label{lagrange_mvt}
+    Let $a < b$ reals and $f: [a,b] \xrightarrow{} \R$ a function (with Dom($f$) = $[a,b]$)
+    that is continous on $[a,b]$ and differentiable on $(a,b)$. Then,
+
+    \[ \exists x \in (a,b): f^{\prime}(x) = \frac{f(b) - f(a)}{b-a}\]
+\end{theorem}
+\begin{proof}
+    
+\end{proof}
+
+\begin{theorem}[The derivative satisfies IVP]
+    
+\end{theorem}
+\begin{proof}
+    The idea of this proof is to construct some function such that
+    at the extremum points of the function, we get $f^{\prime}(x) = t$,
+    where $t$ is the value we'd like to achieve.
+\end{proof}
+
+\subsection{Miscallenous}
+
+\begin{lemma}
+    Let $f: \R \xrightarrow{} \R$ be an everywhere differentiable function.
+    $f$ is Lipschitz continuous if and only if $f^{\prime}$ is bounded.
+\end{lemma}
+
+\subsection{Warmup Exercises}
+
+\begin{enumerate}
+    \item Use the definition of the derivative to compute $f^{\prime}(2)$, where $f(x)= x^{3}$.
+\end{enumerate}
+
+\subsection{Give an example of each of the following or prove that it is impossible.}
+
+\begin{enumerate}
+    \item A continuous but not differentiable function.
+\end{enumerate}
+
+\subsection{Problems}
+
+\begin{enumerate}
+    \item Ross 28.8
+    \item Ross 29.2
+    \item[Ross 29.3] Assume $f$ is differentiable on $\R$ and $f(0) = 0, f(1) = 1, f(2) = 1$.
+    Show that $\fdiff(x) = \frac{1}{2}$ for some $x \in (0,2)$ and 
+    $\fdiff(x) = \frac{1}{7}$ for some $x \in (0,2)$.
+    \item Ross 29.4 
+    \item[Ross 29.5] Let $f$ be defined on $\R$ and assume 
+    \[\forall x,y \in \R: \lvert f(x) - f(y) \rvert \leq (x - y)^{2} \]
+    Prove that f is the constant function.
+    \item Ross 29.7
+    \item Ross 29.9
+    \item[Ross 29.10] 
+    \item[Ross 29.11] Show that $\forall x > 0: \sin(x) \leq x$.
+    \item[Ross 29.14] Let $f,g$ be differentiable on $\R$, $f(0) = g(0)$ and 
+    $\forall x \geq 0: \fdiff(x) \leq g^{\prime}(x)$. Prove that $\forall x \geq 0: f(x) \leq g(x)$.
+    \item Assume $f$ is differentiable on $\R$ and $\forall x \in \R: 1 \leq f^{\prime}(x) \leq 2$.
+    Prove that $\forall x \geq 0: x \leq f(x) \leq 2x$.
+    \item[Ross 29.18] 
+    \item Show that there's no function whose derivative is the Dirichlet function. 
+
+\end{enumerate}
+
+\subsubsection{A Discontinuous Derivative}
+
+Let $f = x^{2}\sin(\frac{1}{x})$ when $x \neq 0$ and $f(0) = 0$. 
+$f$ is clearly differentiable at $a \neq 0$ with 
+
+\[ \fdiff(x) = 2x \sin(\frac{1}{x}) - \cos(\frac{1}{x})\]
+
+$f$ is also differentiable at $0$ using the limit definition of the derivative,
+and $\fdiff(0) = 0$.
+
+However, we can show that $\fdiff$ is discontinuous using the sequential
+definition of continuity. Let 
+
+\[ a_{n} = \frac{1}{2 \pi n}\] 
+
+\[ b_{n} = \frac{1}{2 \pi n + \pi}\] 
+
+Both of these sequences converge to $0$, but $\fdiff(a_{n}) $ converges to 
+$0$ whereas $\fdiff(b_{n})$ does not.
+
+\textbf{Follow-up Question:} Why did we use $x^{2}$? What happens if
+we try to set $f = x \sin(\frac{1}{x})$? Is this function continuous/differentiable
+at $0$?
+
+\subsection{Solutions to Problems}
+
+\begin{enumerate}
+    \item [Ross 28.8] Do what you gotta do.
+    \item[Ross 29.2] Turn this expression into the derivative and use the fact that
+    the derivative of $\cos$ is $\sin$.
+    \item[Ross 29.3] The first $x$ comes from applying MVT to $f(0)$ and $f(1)$. The second
+    $x$ comes from the IVP property of the derivative coupled with the fact that 
+    $\fdiff(x) = 0$ for some $x \in (1,2)$.
+    \item[Ross 29.4] Use the hint, and it's immediate.
+    \item[Ross 29.5] Take the limit and show that the derivative is $0$ everywhere.
+    \item[Ross 29.7] Solution in the back of the book.
+    \item[Ross 29.9] Solution in the back of the book.
+    \item[Ross 29.10] Do what you gotta do. The point is that the function
+    is not increasing even though the derivative is positive.
+    \item[Ross 29.11] Take the derivative of $f(x) = x - \sin(x)$.
+    \item[Ross 29.14] Use contradiction and MVT.
+    \item[Ross 29.18] Immediate.
+    \item The derivative should satisfy the IVP property.
+\end{enumerate}
+
+
+
+\newpage 
+
+\section{Taylor's Theorem}
+
+
+
+\subsection{Problems}
+
+\begin{enumerate}
+    \item Find the Taylor series for $\cos(x)$, $\sin(x)$ and $e^{x}$.
+    Prove that the radius of convergence is $\infty$.
+    \item 
+\end{enumerate}
+
+\newpage
+
+\section{Integration}
+
+\subsection{Problems}
+
+\begin{enumerate}
+    \item Oscillation lemma
+    \item Ross 32.7, 32.8, 33.7, 33.8 (all in Notability)
+    \item Ross 33.4 -- 1 at rationals and -1 at irrationals
+    \item Ross 33.13 -- IVT for integrals
+    \item MATH131BH Homework 5 Problem 3
+    \item MATH131BH Homework 5 Problem 5
+\end{enumerate}
+
+\newpage
+
+\section{Fundamental Theorem of Calculus}
+
+\begin{enumerate}
+    \item Lipschitz continuity of the antiderivative
+    \item Ross 34.5
+    \item 
+\end{enumerate}
+
+\newpage
+
+\section{Challenge Problems}
+
+\begin{enumerate}
+    \item Let $\{s_{n}\}_{n \in \mathbb{N}}$ a sequence of real numbers with $s_{1} := \sqrt{2}$ and $s_{n+1} := \sqrt{2 + \sqrt{s_{n}}}$. Prove that $s_{n}$ converges.
+
+    \item
+    Let $\{x_{n}\}_{n \in \mathbb{N}} \subset (0,1)$ be a real-valued sequence. 
+
+    \begin{enumerate}
+        \item Show that $\{x_{n}\}_{n \in \mathbb{N}}$ admits a convergent subsequence.
+
+        
+        
+        \item If there is a convergent subsequence $\{x_{n_{k}}\}_{n \in \mathbb{N}}$, show with a counter example that it doesn't need to converge to a point within $(0,1)$.
+    \end{enumerate}
+
+    \item Given two reals $a_0, b_0$, define $\{a_{n}\}_{n \in \mathbb{N}}$ and $\{b_{n}\}_{n \in \mathbb{N}}$ recursively so that
+
+    \[ \forall n \in \mathbb{N}: a_{n+1} = \frac{a_{n} + b_{n}}{2} \wedge b_{n+1} = \sqrt{a_{n} + b_{n}}\]
+
+    Prove that $\lim_{n\to\infty} a_{n} = \lim_{n\to\infty} b_{n}$.
+\end{enumerate}
+
+\end{document}
